@@ -1,0 +1,85 @@
+/* General modifications */
+
+body {
+  background-color: #000000db;
+  color: bisque;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+.h1 {
+  font-size: 48px;
+  color: greenyellow;
+}
+
+h2,
+.h2 {
+  font-size: 36px;
+  color: blueviolet;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+p {
+  margin-top: 0;
+}
+
+small {
+  font-size: 8px;
+}
+
+/* Specifics - colors */
+
+.color-blue {
+  color: blue;
+  text-transform: uppercase;
+}
+
+.color-red {
+  color: red;
+  text-transform: uppercase;
+}
+
+.color-bg-red {
+  background-color: red;
+}
+
+/* Specifics - font-sizes */
+
+.fontsize-48px {
+  font-size: 48px;
+}
+
+.fontsize-36px {
+  font-size: 36px;
+}
+
+.fontsize-30px {
+  font-size: 30px;
+}
+
+.fontsize-24px {
+  font-size: 24px;
+}
+
+.fontsize-18px {
+  font-size: 18px;
+}
+
+.fontsize-14px {
+  font-size: 14px;
+}

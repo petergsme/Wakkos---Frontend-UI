@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .challenge {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .objective {
+            background: #e8f5e9;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        .css-props {
+            background: #fff3e0;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-family: monospace;
+        }
+
+        .html-code {
+            background: #1a1a1a;
+            color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre;
+        }
+
+        .editor {
+            width: 100%;
+            height: 80px;
+            font-family: monospace;
+            margin: 1rem 0;
+            padding: 0.5rem;
+        }
+
+        .result {
+            border: 2px solid #4CAF50;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .apply {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .solution {
+            background: #2196F3;
+            color: white;
+        }
+
+        .solution-text {
+            display: none;
+            background: #e3f2fd;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 4px;
+        }
+
+        /* Estilos base para los elementos de los retos */
+        .result * {
+            padding: 8px;
+            margin: 4px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🎯 Retos de Selectores CSS - Studio Ghibli</h1>
+
+    <div class="challenge">
+        <h2>Reto 1: Los Susuwatari</h2>
+        <div class="objective">
+            Haz que solo los Susuwatari que están inmediatamente después de un Totoro guardián tengan estas propiedades:
+        </div>
+        <div class="css-props">
+            {
+            color: #ff69b4;
+            background: #ffe6f2;
+            font-weight: bold;
+            }
+        </div>
+
+        <div class="html-code">&lt;div class="forest"&gt;
+            &lt;div class="totoro guardian"&gt;Totoro Guardian&lt;/div&gt;
+            &lt;div class="soot"&gt;Susuwatari 1&lt;/div&gt;
+            &lt;div class="soot"&gt;Susuwatari 2&lt;/div&gt;
+            &lt;div class="totoro"&gt;Totoro Pequeño&lt;/div&gt;
+            &lt;div class="soot"&gt;Susuwatari 3&lt;/div&gt;
+            &lt;/div&gt;</div>
+
+        <textarea class="editor" data-challenge="1"></textarea>
+
+        <div class="result" data-challenge="1">
+            <div class="forest">
+                <div class="totoro guardian">Totoro Guardian</div>
+                <div class="soot">Susuwatari 1</div>
+                <div class="soot">Susuwatari 2</div>
+                <div class="totoro">Totoro Pequeño</div>
+                <div class="soot">Susuwatari 3</div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="apply" onclick="applyCSS(1)">Aplicar CSS</button>
+            <button class="solution" onclick="toggleSolution(1)">Ver Solución</button>
+        </div>
+        <div class="solution-text" data-solution="1">
+            .totoro.guardian + .soot {
+            color: #ff69b4;
+            background: #ffe6f2;
+            font-weight: bold;
+            }
+        </div>
+    </div>
+
+    <div class="challenge">
+        <h2>Reto 2: La Casa de Baños</h2>
+        <div class="objective">
+            Estiliza todos los contratos que aparecen después de cualquier espíritu con estas propiedades:
+        </div>
+        <div class="css-props">
+            {
+            color: #9c27b0;
+            background: #f3e5f5;
+            border-left: 3px solid #9c27b0;
+            }
+        </div>
+
+        <div class="html-code">&lt;div class="bathhouse"&gt;
+            &lt;div class="spirit"&gt;Kaonashi&lt;/div&gt;
+            &lt;div class="contract"&gt;Sen&lt;/div&gt;
+            &lt;div class="contract"&gt;Haku&lt;/div&gt;
+            &lt;div class="worker"&gt;Lin&lt;/div&gt;
+            &lt;div class="contract"&gt;Boh&lt;/div&gt;
+            &lt;/div&gt;</div>
+
+        <textarea class="editor" data-challenge="2"></textarea>
+
+        <div class="result" data-challenge="2">
+            <div class="bathhouse">
+                <div class="spirit">Kaonashi</div>
+                <div class="contract">Sen</div>
+                <div class="contract">Haku</div>
+                <div class="worker">Lin</div>
+                <div class="contract">Boh</div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="apply" onclick="applyCSS(2)">Aplicar CSS</button>
+            <button class="solution" onclick="toggleSolution(2)">Ver Solución</button>
+        </div>
+        <div class="solution-text" data-solution="2">
+            .spirit ~ .contract {
+            color: #9c27b0;
+            background: #f3e5f5;
+            border-left: 3px solid #9c27b0;
+            }
+        </div>
+    </div>
+    <div class="challenge">
+        <h2>Reto 3: El Castillo Ambulante</h2>
+        <div class="objective">
+            Selecciona solo las habitaciones que son hijas directas del castillo (no las que están dentro de otros
+            contenedores) y aplica:
+        </div>
+        <div class="css-props">
+            {
+            border: 2px dashed #ff9800;
+            background: #fff3e0;
+            border-radius: 8px;
+            padding: 15px;
+            }
+        </div>
+
+        <div class="html-code">&lt;div class="castle"&gt;
+            &lt;div class="room"&gt;Sala de Howl&lt;/div&gt;
+            &lt;div class="storage"&gt;
+            &lt;div class="room"&gt;Habitación Secreta&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="room"&gt;Sala de Calcifer&lt;/div&gt;
+            &lt;div class="room"&gt;Cocina de Sophie&lt;/div&gt;
+            &lt;/div&gt;</div>
+
+        <textarea class="editor" data-challenge="3"></textarea>
+
+        <div class="result" data-challenge="3">
+            <div class="castle">
+                <div class="room">Sala de Howl</div>
+                <div class="storage">
+                    <div class="room">Habitación Secreta</div>
+                </div>
+                <div class="room">Sala de Calcifer</div>
+                <div class="room">Cocina de Sophie</div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="apply" onclick="applyCSS(3)">Aplicar CSS</button>
+            <button class="solution" onclick="toggleSolution(3)">Ver Solución</button>
+        </div>
+        <div class="solution-text" data-solution="3">
+            .castle > .room {
+            border: 2px dashed #ff9800;
+            background: #fff3e0;
+            border-radius: 8px;
+            padding: 15px;
+            }
+        </div>
+    </div>
+
+    <div class="challenge">
+        <h2>Reto 4: El Bosque de los Kodama</h2>
+        <div class="objective">
+            Selecciona todos los espíritus del bosque que están dentro de árboles sagrados y aplica:
+        </div>
+        <div class="css-props">
+            {
+            color: #4caf50;
+            background: #e8f5e9;
+            border: 2px solid #81c784;
+            transform: rotate(5deg);
+            }
+        </div>
+
+        <div class="html-code">&lt;div class="forest"&gt;
+            &lt;div class="tree sacred"&gt;
+            &lt;div class="kodama"&gt;Espíritu Antiguo&lt;/div&gt;
+            &lt;div class="nest"&gt;
+            &lt;div class="kodama"&gt;Espíritu Bebé&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="tree"&gt;
+            &lt;div class="kodama"&gt;Espíritu Normal&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;</div>
+
+        <textarea class="editor" data-challenge="4"></textarea>
+
+        <div class="result" data-challenge="4">
+            <div class="forest">
+                <div class="tree sacred">
+                    <div class="kodama">Espíritu Antiguo</div>
+                    <div class="nest">
+                        <div class="kodama">Espíritu Bebé</div>
+                    </div>
+                </div>
+                <div class="tree">
+                    <div class="kodama">Espíritu Normal</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="apply" onclick="applyCSS(4)">Aplicar CSS</button>
+            <button class="solution" onclick="toggleSolution(4)">Ver Solución</button>
+        </div>
+        <div class="solution-text" data-solution="4">
+            .tree.sacred .kodama {
+            color: #4caf50;
+            background: #e8f5e9;
+            border: 2px solid #81c784;
+            transform: rotate(5deg);
+            }
+        </div>
+    </div>
+
+    <div class="challenge">
+        <h2>Reto 5: El Jardín de Ponyo</h2>
+        <div class="objective">
+            Selecciona los peces mágicos que están dentro de olas especiales, pero solo si vienen después de una medusa
+            y aplica:
+        </div>
+        <div class="css-props">
+            {
+            color: #e91e63;
+            background: #fce4ec;
+            border-radius: 50%;
+            transform: translateY(-5px);
+            }
+        </div>
+
+        <div class="html-code">&lt;div class="ocean"&gt;
+            &lt;div class="wave special"&gt;
+            &lt;div class="jellyfish"&gt;Medusa&lt;/div&gt;
+            &lt;div class="fish magic"&gt;Ponyo&lt;/div&gt;
+            &lt;div class="fish magic"&gt;Hermana&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="wave special"&gt;
+            &lt;div class="fish magic"&gt;Pez Normal&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;</div>
+
+        <textarea class="editor" data-challenge="5"></textarea>
+
+        <div class="result" data-challenge="5">
+            <div class="ocean">
+                <div class="wave special">
+                    <div class="jellyfish">Medusa</div>
+                    <div class="fish magic">Ponyo</div>
+                    <div class="fish magic">Hermana</div>
+                </div>
+                <div class="wave special">
+                    <div class="fish magic">Pez Normal</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="apply" onclick="applyCSS(5)">Aplicar CSS</button>
+            <button class="solution" onclick="toggleSolution(5)">Ver Solución</button>
+        </div>
+        <div class="solution-text" data-solution="5">
+            .wave.special .jellyfish ~ .fish.magic {
+            color: #e91e63;
+            background: #fce4ec;
+            border-radius: 50%;
+            transform: translateY(-5px);
+            }
+        </div>
+    </div>
+
+    <script>
+        function applyCSS(num) {
+            const editor = document.querySelector(`.editor[data-challenge="${num}"]`);
+            const result = document.querySelector(`.result[data-challenge="${num}"]`);
+
+            // Eliminar estilo anterior si existe
+            const oldStyle = result.querySelector('style');
+            if (oldStyle) oldStyle.remove();
+
+            // Crear y añadir nuevo estilo
+            const style = document.createElement('style');
+            style.textContent = editor.value;
+            result.appendChild(style);
+        }
+
+        function toggleSolution(num) {
+            const solution = document.querySelector(`.solution-text[data-solution="${num}"]`);
+            solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>

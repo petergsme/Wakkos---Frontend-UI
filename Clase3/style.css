@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.color-red {
+  background-color: red;
+}
+
+.color-blue {
+  background-color: blue;
+}
+
+.color-yellow {
+  background-color: yellow;
+}
+
+.color-green {
+  background-color: green;
+}
+
+div {
+  margin: 1px;
+  display: inline-block;
+  max-width: calc(25% - 8px);
+}

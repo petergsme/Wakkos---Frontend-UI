@@ -1,0 +1,142 @@
+<!-- 
+La organizacion de las CARPETAS es lo mas importante.
+el navegador solo entiende html, css y js. 
+la accesibilidad es importante(ciegos, daltonicos...)
+La INDENTACIÓN DEL CODIGO ES IMPORTANTE.
+
+ctrl + mayus + enter -> línea nueva donde esté el cursor.
+ctrl + ç -> comentario.
+html:5 -> raiz del documento html.
+
+en html tenemos:
+etiqueta <> de apertura y cierre </>
+elemento -> h1, div, link, meta, title, body...
+valor -> lo que lleva dentro un abributo.
+atributos -> href, class, content, id...
+Class puede incluir varias clases distintas separadas por espacios -> class = "fastfood layers ".
+Id solo puede atacar un unico elemento, no es reutilizable.
+
+RECUERDA: el VALOR de un atributo, y el CONTENIDO de un elemento.
+
+en CSS tenemos selectores de elementos, clases o ids de html.(h1 {}, .fastfood {}, #perineo)
+deberiamos mantener la especificidad baja.
+los selectores atacan propiedades y les dan otro valor;
+selector {
+  propiedad: valor;
+}
+
+HEAD incluye la configuracion base del documento.
+BODY incluye todo el contenido del documento.
+HEAD debe incluir la referencia a la hoja de estilos.
+
+<link rel="stylesheet" href="./style.css" /> -> hoja de estilos referenciada dentro del head.
+
+NO OLVIDES QUE EXISTEN VALIDADORES DE HTML Y CSS-->
+
+<!-- 
+
+No olvides, P, H1-H6, y A.
+
+Los elementos en bloque ocupan el ancho de la ventana del navegador o la etiqueta que los contiene.
+Los elementos en línea van dentro de elementos en bloque (elementos strong/em/a/img dentro de un p.)
+
+. → "estoy aquí" (directorio actual)
+.. → "sube un nivel" (directorio padre)
+/ → separador de carpetas (siempre usa forward slash en web)
+
+./imagen.jpg (en la misma carpeta)
+../imagen.jpg (sube un nivel)
+../../imagen.jpg (sube dos niveles)
+
+Dentro de un HREF, mailto: sirve para enviar un correo a la direccion de correo especificada.
+
+Los grupos de enlaces que componen elementos de navegación, como el menú principal de una página, deben
+agruparse en listas desordenadas como UL LI. Es muy común que estas listas incluyan el atributo ID.
+
+El elemento img <img src="images/sao-beach.jpg" alt="Sao Beach"> contiene los atributos source y texto alternativo.
+
+Los SVG pueden insertarse inline usando su propia etiqueta. Tambien pueden modificarse y animarse usando CSS
+o JavaScript, cada componente de la imagen se convierte en un elemento.
+<svg xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" fill="#ff0000">
+</svg>
+
+UL y OL sirven para crear listas llenas de li. UL las crea desordenadas, OL las ordena y numera. Son elementos en bloque.
+
+listas de definición,La etiqueta <dl> es la que crea la lista, mientras que <dt> y <dd>
+indican el término y su definición.
+<h1>Microsoft Surface Studio 2</h1>
+
+<dl>
+
+<dt>Pantalla</dt>
+<dd>PixelSense 192 PPI</dd>
+
+<dt>Procesador</dt>
+<dd>Intel Core i7</dd>
+
+<dt>Memoria RAM</dt>
+<dd>32GB</dd>
+
+</dl>
+
+<span> etiqueta neutra, sin significado claro. inline.
+se utiliza para aplicar estilos CSS a un fragmento de texto o agrupar distintos elementos en línea.
+
+<div> etiqueta neutra, sin significado claro. en bloque.
+para definir un bloque de contenido o sección de la página, pudiendo aplicarle estilos CSS o realizar operaciones sobre él.
+Usar si no hay etiqueta mas semantica.
+
+ETIQUETAS DE HTML5
+
+MAIN -  contenido principal del <body> que debe ser único al documento(a esa página) y excluir contenido que se repita a través de un conjunto en paginas diferentes como: barras laterales, enlaces de navegación, información de derechos de autor, logos del sitio y formularios de búsqueda, footer...
+
+HEADER - grupo de textos de presentación o ayudas a la navegación. Por lo general contiene el encabezado de una sección, h1-h6.
+Puede aparecer más de una vez en el código y se comporta como un elemento en bloque.
+Además de representar el encabezado principal de la página, puede representar el de una sección y un artículo.
+
+FOOTER - el pie de la página, una sección o un artículo, e incluye información y enlaces acerca del contenido de dicha página o etiqueta: como su autor, copyright, año,
+Puede aparecer más de una vez en el código y se comporta como un elemento en bloque.
+
+SECTION - sección genérica de la página que contiene un grupo de elementos, los cuales guardan relación con un mismo tema, incorporando casi siempre un titular o cabecera.
+Puede aparecer más de una vez en el código y se comporta como un elemento en bloque.
+Una sección puede contener subsecciones.
+
+ARTICLE - contenido, dentro de la página, que podría distribuirse o reutilizarse de manera independiente.
+Puede aparecer más de una vez en el código y se comporta como un elemento en bloque.
+Tambien sirve como contenedor de los productos o artículos de una tienda online o de los trabajos de un portfolio.
+
+ASIDE - mostrar información relacionada con el contenido de una página o etiqueta, pudiendo eliminarse sin afectar en ningún modo al significado de dicho contenido.
+Puede aparecer más de una vez en el código y se comporta como un elemento en bloque.
+Puede utilizarse dentro de secciones y artículos.
+
+NAV - agrupa elementos de navegación principal, que enlazan con otras páginas o partes de la misma.
+No debe utilizarse para envolver absolutamente todos los grupos de enlaces, tan solo los principales.
+Puede aparecer más de una vez en el código y se comporta como un elemento en bloque.
+
+p124 empiezan otras etiquetas: figure/figcaption, video, audio, time, canvas, y main.
+Respectivamente, sirven para:
+-contener  imágenes,ilustraciones, gráficos y ejemplos de código;
+-insertar vídeo y audio que se reproducirá usando el reproductor nativo del navegador;
+-para indicar una fecha y/o hora, para dibujar gráficos y crear animaiciones a través de scripts;
+-y para envolver el contenido principal de la página.
+
+?HTML5 se permite la creación de nuevos atributos, que proporcionen datos sobre su etiqueta. Para ello, debemos añadir el prefijo ‘data-’ al nombre del atributo.
+
+FORMULARIOS - los utilizamos a diario, y casi sin darnos cuenta, para buscar, comentar, iniciar sesión, registrarnos, suscribirnos...
+Sus campos deben ir envueltos en la etiqueta form.
+*El PDF explica después que los formularios han recibido un overhaul interno con HTML5, y aunque muestra algunas nuevas caracteristicas que se han introducido, no las explica del todo. Nos esperaremos a que surja.
+
+-->
+
+<!-- CSS - IDEL
+ 
+Vale la pena leerlo del documento y entrar a los links recomendados de tanto en tanto.
+
+-->
+
+<!-- Notas deberes
+ 
+parrafo no puede incluir una lista, no puede incluir casi ningun otro block element, salvo los no semanticos creo.
+
+-->
