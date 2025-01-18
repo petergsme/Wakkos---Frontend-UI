@@ -1,25 +1,13 @@
-/* ELEMENTO */
-
+/*
+SELECTORES GENERALES
+*/
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Inter;
-  font-weight: 300;
-  font-size: 20px;
-  color: white;
-}
-
-header {
-  background-image: url(./images/background-landing.jpg);
-  background-size: cover;
-  padding: 36px 12px 24px 12px;
-  height: 100vh;
-  position: relative;
-}
-
+/*
+SELECTORES DE ELEMENTO
+*/
 h1,
 h2,
 h3,
@@ -27,26 +15,26 @@ p {
   margin: 0;
 }
 
-/* CLASE */
-
-.big-claim {
-  font-size: 40px;
+body {
+  margin: 0;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 20px;
 }
 
-.button {
-  text-decoration: none;
-  font-size: 16px;
-  color: white;
-  background-color: #ef7d00;
-  padding: 12px 24px;
-  border-radius: 6px;
+header {
+  background-image: url(./images/background-landing.jpg);
+  background-size: cover;
+  background-position: 40%;
+  padding: 36px 12px 24px 12px;
+  height: 100vh;
 }
 
-.header-content {
-  position: absolute;
-  bottom: 24px;
-}
+/*
+CLASES
+*/
 
+/* CLASES GENERALES */
 .topbar {
   z-index: 2;
   position: fixed;
@@ -55,22 +43,11 @@ p {
   right: 12px;
 }
 
-.logo-esat {
-  height: 30px;
-}
-
-.logo-postgrado {
-  height: 80px;
-  position: absolute;
-  right: 0;
-  top: -50%;
-}
-
-/* SECCIÓN NÚMERO UNO */
-
-.diseña-desarrolla {
-  padding: 84px 12px 72px 12px;
-  height: auto;
+.button {
+  text-decoration: none;
+  background-color: #ef7d00;
+  padding: 12px 24px;
+  border-radius: 6px;
 }
 
 .icon {
@@ -84,51 +61,11 @@ p {
   width: 48px;
   height: 48px;
   display: inline-block;
+  /* PROPIEDADES como el display de arriba son la duda que he preguntado a Wakkos. Ese inline-block ya existe como clase de utilidad, ¿lo borro de aqui y uso eso o lo dejo? Wakkos dice ambas están bien, a mi juicio en este caso mejor dejarla puesta ahorrar html*/
 }
 
 button + button {
   margin-left: 24px;
-}
-
-/* SECCIÓN NÚMERO DOS */
-
-.proyectos-personalizados {
-  background-color: #eef0f5;
-  padding: 96px 12px 72px 12px;
-  height: auto;
-}
-
-/* SECCIÓN NÚMERO TRES */
-
-.formacion-integral {
-  padding: 84px 12px 72px 12px;
-  height: auto;
-}
-
-/* CLASES DE UTILIDAD */
-
-.color-orange {
-  color: #ef7d00;
-}
-
-.color-black {
-  color: black;
-}
-
-.margin-bottom-small {
-  margin-bottom: 12px;
-}
-
-.margin-bottom-medium {
-  margin-bottom: 20px;
-}
-
-.margin-bottom-big {
-  margin-bottom: 30px;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .section-claims {
@@ -137,31 +74,131 @@ button + button {
   line-height: 105%;
 }
 
-.align-left {
-  text-align: left;
+.icon--padding {
+  padding-top: 10px;
+  padding-right: 10px;
 }
 
-.align-right {
-  text-align: right;
+/* CLASES DEL HERO SECTION */
+.header-content {
+  bottom: 24px;
+  left: 12px;
+  right: 12px;
 }
 
-.align-center {
-  text-align: center;
+.logo-esat {
+  height: 30px;
 }
 
-.text-medium {
-  font-weight: 700;
-  font-size: 20px;
+.logo-postgrado {
+  height: 80px;
+  right: 0;
+  top: -50%;
 }
 
-.text-small {
-  font-size: 16px;
+/* CLASES DE "DISEÑA Y DESARROLLA" */
+
+/* CLASES DE "PROYECTOS PERSONALIZADOS"*/
+.proyectos-personalizados--bg-color {
+  background-color: #eef0f5;
 }
 
+/* CLASES DE "FORMACIÓN INTEGRAL"*/
 .width {
   max-width: calc(100% - 24px - 29px);
 }
 
-.vertical {
+.section-hashtag {
+  background-image: url(./images/background-landing.jpg);
+  background-size: cover;
+  background-position: 40%;
+  padding: 220px 12px;
+}
+
+/*
+ CLASES DE UTILIDAD
+*/
+
+/* COLORES */
+.color-white {
+  color: white;
+}
+.color-orange {
+  color: #ef7d00;
+}
+.color-black {
+  color: #3c3c3c;
+}
+
+/* TEXTOS */
+.text--small {
+  font-size: 16px;
+}
+.text--medium {
+  font-size: 20px;
+}
+.text--big {
+  font-size: 40px;
+}
+
+.text--light {
+  font-weight: 300;
+}
+.text--regular {
+  font-weight: 400;
+}
+.text--bold {
+  font-weight: 700;
+}
+
+.text--lineheight-big {
+  line-height: 140%;
+}
+
+/* TAMAÑO Y POSICIONAMIENTO */
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+
+.vertical-align {
   vertical-align: top;
+}
+
+.relative-position {
+  position: relative;
+}
+.absolute-position {
+  position: absolute;
+}
+
+/* MÁRGENES DE ELEMENTO Y PADDINGS DE SECCIÓN*/
+.margin-bottom--verysmall {
+  margin-bottom: 5px;
+}
+.margin-bottom--small {
+  margin-bottom: 12px;
+}
+.margin-bottom--medium {
+  margin-bottom: 20px;
+}
+.margin-bottom--big {
+  margin-bottom: 30px;
+}
+.margin-bottom--huge {
+  margin-bottom: 48px;
+}
+
+.section-padding {
+  padding: 84px 12px 72px 12px;
+}
+
+/* DISPLAY DE LOS BLOQUES */
+.inline-block {
+  display: inline-block;
 }
