@@ -1,0 +1,167 @@
+/* ELEMENTO */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter;
+  font-weight: 300;
+  font-size: 20px;
+  color: white;
+}
+
+header {
+  background-image: url(./images/background-landing.jpg);
+  background-size: cover;
+  padding: 36px 12px 24px 12px;
+  height: 100vh;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* CLASE */
+
+.big-claim {
+  font-size: 40px;
+}
+
+.button {
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  background-color: #ef7d00;
+  padding: 12px 24px;
+  border-radius: 6px;
+}
+
+.header-content {
+  position: absolute;
+  bottom: 24px;
+}
+
+.topbar {
+  z-index: 2;
+  position: fixed;
+  top: 36px;
+  left: 12px;
+  right: 12px;
+}
+
+.logo-esat {
+  height: 30px;
+}
+
+.logo-postgrado {
+  height: 80px;
+  position: absolute;
+  right: 0;
+  top: -50%;
+}
+
+/* SECCIÓN NÚMERO UNO */
+
+.diseña-desarrolla {
+  padding: 84px 12px 72px 12px;
+  height: auto;
+}
+
+.icon {
+  font-family: Inter;
+  font-weight: 600;
+  background-color: #333333;
+  color: white;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+}
+
+button + button {
+  margin-left: 24px;
+}
+
+/* SECCIÓN NÚMERO DOS */
+
+.proyectos-personalizados {
+  background-color: #eef0f5;
+  padding: 96px 12px 72px 12px;
+  height: auto;
+}
+
+/* SECCIÓN NÚMERO TRES */
+
+.formacion-integral {
+  padding: 84px 12px 72px 12px;
+  height: auto;
+}
+
+/* CLASES DE UTILIDAD */
+
+.color-orange {
+  color: #ef7d00;
+}
+
+.color-black {
+  color: black;
+}
+
+.margin-bottom-small {
+  margin-bottom: 12px;
+}
+
+.margin-bottom-medium {
+  margin-bottom: 20px;
+}
+
+.margin-bottom-big {
+  margin-bottom: 30px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.section-claims {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 105%;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.text-medium {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.text-small {
+  font-size: 16px;
+}
+
+.width {
+  max-width: calc(100% - 24px - 29px);
+}
+
+.vertical {
+  vertical-align: top;
+}
