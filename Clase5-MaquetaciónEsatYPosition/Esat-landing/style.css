@@ -202,3 +202,5 @@ button + button {
 .inline-block {
   display: inline-block;
 }
+
+/* Es mejor quitar el padding y margin del body y crear un nuevo contenedor como él. Si necesitamos que haya secciones pegadas al borde y otras separadas es mejor que cada section tenga un padding específico según sus necesidades. */
