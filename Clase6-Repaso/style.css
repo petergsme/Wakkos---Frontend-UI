@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+.elemento {
+  background-color: pink;
+  width: 100vw;
+  padding: 20px;
+}
+
+a {
+  color: white;
+  padding: 1em;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.background-color--violet {
+  background-color: blueviolet;
+}
+
+.background-color--red {
+  background-color: orangered;
+}
+
+.background-color--green {
+  background-color: greenyellow;
+}
