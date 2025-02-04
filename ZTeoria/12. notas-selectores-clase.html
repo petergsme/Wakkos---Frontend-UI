@@ -1,40 +1,55 @@
 <!-- 
- LOS SELECTORES DE LA CLASE A LA QUE FALTÉ.
+CLASE A LA QUE FALTÉ.
 
- "siempre que utiliceis un selector descendiente preguntaos por qué lo estais usando, eso os obligará a no usarlo a la ligera"
+"Siempre que utiliceis un selector descendiente preguntaos por qué lo estais usando, eso os obligará a no usarlo a la ligera"
 
- La parte interesante, hay PSEUDO-CLASES Y PSEUDO-ELEMENTOS.
+div *         Selector de Descendiente Universal, selecciona todo lo que haya dentro de divs. 
 
- Las pseudo-clases son clases basadas en la posicion de los elementos respecto al html.
+La parte interesante, hay PSEUDO-CLASES Y PSEUDO-ELEMENTOS.
+Las pseudo-clases son clases basadas en la posicion de los elementos respecto al html.
 
- x:first-child       x:last-child       x:only-child        x:nth-child(3)
+x:first-child  
+x:last-child               :nth-of-type(even)
+x:only-child               :nth-of-type(An+B)
+x:nth-child(3)
+x:not(:first-child)        x:empty               
 
- x:not(:first-child)        x:empty
+Cuidado, los child se aplican no al padre si no al tipo del elemento del hijo que quieres. Si un div tiene tres p, y quieres acceder al primero escribes p:first-child, el primer hijo p de algo. No escribes div:first-child. Además algunos selectores como last-child puede hacer uso del parentesis para seleccionar posición si usas nth-last-child.
 
- diferentes maneras de acceder a elementos.
+:nth-of-type(2n+3)          Select every 2nd plate, starting from the 3rd, 
+                            2n referencia cada cuanto selecciona, el + es para desde donde empieza.
+
+apple:only-of-type          Solo selecciona el elemento si es el único de ese tipo en su contenedor.
+div:last-of-type            selects the last div in every element.
+
+bento:empty                 Selecciona los bento que no contienen nada más.
+
+.toggle:checked             Elementos activados como una checkbox. Sirve para inputs y options.
 
 
- Otra parte chula: LOS SELECTORES DE ATRIBUTO.
+Otra parte chula: LOS SELECTORES DE ATRIBUTO.
 
 [attribute]
 input[attribute]
 
 [attribute*="value"]       contiene X.
-[attribute^="value"]        comienza por X.
+[attribute^="value"]       comienza por X.
 [attribute$="value"]       termina con X.
+
+https://flukeout.github.io/
 
 FORMULARIOS:
 
- Un INPUT debe TENER un LABEL cuyo atributo FOR coincida con el ID del INPUT.
+Un INPUT debe TENER un LABEL cuyo atributo FOR coincida con el ID del INPUT.
 
- <label for="name">Nombre</label>
- <input type="text" id="name" placeholder-"Jane Doe" disabled>
+<label for="name">Nombre</label>
+<input type="text" id="name" placeholder-"Jane Doe" disabled>
  
- El atributo DISABLED solo puede ser true o false, y marca si una interacción está activa o deshabilitada. Podrías escribir disabled = "true", pero el mero hecho de que aparezca ya implicaría que es true, y cuando no está presente es false.
+El atributo DISABLED solo puede ser true o false, y marca si una interacción está activa o deshabilitada. Podrías escribir disabled = "true", pero el mero hecho de que aparezca ya implicaría que es true, y cuando no está presente es false.
 
- *Recuerda como funciona el EMMET CHEAT SHEET: nav>ul>1i>a[href="#"]{TExto $} - es igual a acceder a esos atributos en CSS. 
+*Recuerda como funciona el EMMET CHEAT SHEET: nav>ul>1i>a[href="#"]{TExto $} - es igual a acceder a esos atributos en CSS. 
 
-
+Los links internos, esos que llevan a alguna parte de la página en la que ya estás, se llaman BOOKMARKS. Puedes utilizar atributos ID para nombrar los elementos a los que querrás ir, y elementos A con href con esos ID para llevarte allí.
 
 
 
