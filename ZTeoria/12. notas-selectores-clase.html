@@ -17,7 +17,7 @@ x:not(:first-child)        x:empty
 Cuidado, los child se aplican no al padre si no al tipo del elemento del hijo que quieres. Si un div tiene tres p, y quieres acceder al primero escribes p:first-child, el primer hijo p de algo. No escribes div:first-child. Además algunos selectores como last-child puede hacer uso del parentesis para seleccionar posición si usas nth-last-child.
 
 :nth-of-type(2n+3)          Select every 2nd plate, starting from the 3rd, 
-                            2n referencia cada cuanto selecciona, el + es para desde donde empieza.
+                            2n referencia cada cuanto selecciona, el 3 es para desde donde empieza.
 
 apple:only-of-type          Solo selecciona el elemento si es el único de ese tipo en su contenedor.
 div:last-of-type            selects the last div in every element.
@@ -43,7 +43,7 @@ FORMULARIOS:
 Un INPUT debe TENER un LABEL cuyo atributo FOR coincida con el ID del INPUT.
 
 <label for="name">Nombre</label>
-<input type="text" id="name" placeholder-"Jane Doe" disabled>
+<input type="text" id="name" placeholder="Jane Doe" disabled>
  
 El atributo DISABLED solo puede ser true o false, y marca si una interacción está activa o deshabilitada. Podrías escribir disabled = "true", pero el mero hecho de que aparezca ya implicaría que es true, y cuando no está presente es false.
 
@@ -54,25 +54,9 @@ Los links internos, esos que llevan a alguna parte de la página en la que ya es
 p:after
 p:before
 
-Son elementos que desaparecen si su propiedad content = ""; es eliminada. Se trata de pseudoelementos, no son un elemento auténtico.
+Se trata de pseudoelementos, no son un elemento auténtico, desaparecen si su propiedad content = ""; es eliminada. 
 
 
 Cuidado con el proyecto. Habla sobre como hacer las cositas de backend. El front es todo lo que pasa en el navegador. El back todo lo que pasa en el servidor.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 -->
