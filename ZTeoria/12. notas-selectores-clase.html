@@ -6,7 +6,7 @@ CLASE A LA QUE FALTÉ.
 div *         Selector de Descendiente Universal, selecciona todo lo que haya dentro de divs. 
 
 La parte interesante, hay PSEUDO-CLASES Y PSEUDO-ELEMENTOS.
-Las pseudo-clases son clases basadas en la posicion de los elementos respecto al html.
+Las pseudo-clases son clases basadas en la posicion o estado de los elementos respecto al html.
 
 x:first-child  
 x:last-child(2)            :nth-of-type(even)
@@ -51,12 +51,21 @@ El atributo DISABLED solo puede ser true o false, y marca si una interacción es
 
 Los links internos, esos que llevan a alguna parte de la página en la que ya estás, se llaman BOOKMARKS. Puedes utilizar atributos ID para nombrar los elementos a los que querrás ir, y elementos A con href con esos ID para llevarte allí.
 
+
 p:after
 p:before
 
-Se trata de pseudoelementos, no son un elemento auténtico, desaparecen si su propiedad content = ""; es eliminada. 
+Se trata de pseudoelementos, no son un elemento auténtico, desaparecen si su propiedad content = ""; es eliminada. Recuerda que pueden encadenarse a la: "div:hover:after".
+
+transition: all 0.5s ease-in-out;     Propiedad + tiempo + tipo de transición.
+
+*Puedes animar el movimiento de tus elementos a través de propiedades como top, right, bottom y left O la propiedad transform pero la manera de hacerlo será ligeramente diferente. Translate mueve el elemento con respecto a su propio bloque. top, right, bottom y left mueven un elemento con posicion absolute, con respecto al padre relative más cercano.
+
+transform: translateX(100%);
+
+*Para entrar a ubicar un elemento en el z-index, debe estar posicionado es decir, haber recibido un parámetro de posición distinto al que tiene por defecto, como por ejemplo RELATIVE.
 
 
-Cuidado con el proyecto. Habla sobre como hacer las cositas de backend. El front es todo lo que pasa en el navegador. El back todo lo que pasa en el servidor.
+
 
 -->
