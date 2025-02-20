@@ -66,6 +66,78 @@ transform: translateX(100%);
 *Para entrar a ubicar un elemento en el z-index, debe estar posicionado es decir, haber recibido un parámetro de posición distinto al que tiene por defecto, como por ejemplo RELATIVE.
 
 
+FLEXBOX
+
+Flexbox es la madre del cordero. Perfecto para crear rejillas/cuadrículas y alinear elementos al gusto de cada usuario. Permite posicionar los elementos por medio de filas o columnas, establecer tamaños máximos y mínimos para crear un crecimiento responsive, espaciar los elementos de diferentes maneras y hacerlos fluir a líneas inferiores, obligarles a ocupar el total del ancho o largo de su contenedor...
+
+
+Flex se aplica y funciona sobre hijos cuyos padres sean display: flex;
+Los padres con display: flex; optan a personalizar las siguientes propiedades del elemento:
+
+display: flex;                                                          define el contenedor como un flexbox;
+
+flex-direction: row | row-reverse | column | column-reverse;            establece la dirección del flex: ¿columnas o filas?
+
+flex-wrap: nowrap | wrap | wrap-reverse;                                en flex los elementos intentarán ocupar una línea
+                                                                        con wrap puedes hacerlos saltar de línea cuando no quepan.
+
+flex-flow: column wrap;                                                 shorthand de direction y wrap.
+
+justify-content:                                                        disposición de los elementos en el eje horizontal, para línea.
+flex-start | flex-end | center | space-between | space-around | space-evenly |
+start | end | left | right ... + safe | unsafe;
+
+align-items:                                                            disposición de los elementos en el eje vertical, para línea.
+stretch | flex-start | flex-end | center | baseline |
+first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;
+
+align-content:                                                          como justify-content, pero para TODAS LAS LÍNEAS.
+flex-start | flex-end | center | space-between | space-around | space-evenly | stretch |
+start | end | baseline | first baseline | last baseline + ... safe | unsafe;
+
+gap: 10px 20px;                                                         espacio entre elementos de una línea/columna.
+/* SHORTHAND: (row-gap) (column gap) */
+
+*Sobre GAP: "The behavior could be thought of as a minimum gutter, as if the gutter is bigger somehow (because of something like justify-content: space-between;) then the gap will only take effect if that space would end up smaller."
+
+
+HIJOS DE UN FLEX:
+
+order: 5; /* default is 0 */                        Permite cambiar el orden de un elemento. Por defecto, toma su posición del HTML.
+
+flex-grow:
+1;            El elemento crece en proporción a los demás elementos.
+2;            El elemento crecerá hasta ser dos veces mayor que los elementos con flex-grow: 1;
+0;            Su valor por defecto, el elemento no crecerá.
+
+flex-shrink:
+1;            Su valor por defecto, todos los elementos se encogen igual.
+2;            Este elemento se encogerá el doble que los demás.
+0;            Este elemento no se encogerá.
+
+*Los valores de ambos son relativos al resto de items flexibles del contenedor.
+
+
+flex-basis:                                         Define el tamaño base de un elemento antes de que flex-grow o flex-shrink actúen.
+auto;        Usa width si está definido, si no, se ajusta al contenido.
+content;     Ignora width y se ajusta solo al contenido (soporte limitado)
+0px;         Ignora el contenido, depende de flex-grow.
+50px;        Inicia con 50px antes de aplicar flex-grow/shrink
+10%;         Ocupa el 10% del contenedor antes de crecer o encogerse
+
+min-content; Se ajusta al contenido más pequeño posible sin romperlo
+max-content; Se ajusta al contenido más grande sin wrappear.
+fit-content; Crece hasta el contenido sin superar el espacio disponible.
+
+
+flex:                                               Shorthand de grow, shrink y basis en ese orden.
+
+*Cuidado con este shorthand, por defecto es: 0 1 auto; pero al momento que les das algún valor sin especificar el basis, lo pone en 0% en vez de auto. Esto hace que no tenga en cuenta el espacio alrededor del contenido.
+
+
+align-self: auto | flex-start | flex-end...         Es align-items para un único elemento díscolo.
+
+
 
 
 -->
