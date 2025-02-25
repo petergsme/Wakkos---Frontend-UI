@@ -21,9 +21,15 @@ form * {
   margin: 10px;
 }
 
+/* Para el sistema de grids. */
+
 .grid {
   display: flex;
   flex-direction: row;
+}
+
+.grid--right {
+  justify-content: flex-end;
 }
 
 .grid-item__25 {
@@ -40,6 +46,20 @@ form * {
 
 .grid-item__100 {
   flex: 0 0 100%;
+}
+
+/* Para la alineacion */
+
+.grid-item__vertical-align--top {
+  align-self: flex-start;
+}
+
+.grid-item__vertical-align--center {
+  align-self: center;
+}
+
+.grid-item__vertical-align--bottom {
+  align-self: flex-end;
 }
 
 /* Clases reutilizable para utilizar en el pseudo-body que tendremos con react.*/

@@ -91,9 +91,12 @@ align-items:                                                            disposic
 stretch | flex-start | flex-end | center | baseline |
 first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;
 
-align-content:                                                          como justify-content, pero para TODAS LAS LÍNEAS.
+align-content:                                                          como justify-content, pero vertical entre las diferentes LÍNEAS.
 flex-start | flex-end | center | space-between | space-around | space-evenly | stretch |
 start | end | baseline | first baseline | last baseline + ... safe | unsafe;
+
+*Nota: los align y justify se invierten en su uso para columnas, align hara trabajo horizontal, y justify vertical.
+Align-content solo funciona cuando hay varias lineas/columnas.
 
 gap: 10px 20px;                                                         espacio entre elementos de una línea/columna.
 /* SHORTHAND: (row-gap-espacio entre las lineas) (column gap- entre las columnas) */
@@ -132,7 +135,7 @@ fit-content; Crece hasta el contenido sin superar el espacio disponible.
 
 flex:                                               Shorthand de grow, shrink y basis en ese orden.
 
-*Cuidado con este shorthand, por defecto es: 0 1 auto; pero al momento que les das algún valor sin especificar el basis, lo pone en 0% en vez de auto. Esto hace que no tenga en cuenta el espacio alrededor del contenido.
+*Cuidado con este shorthand, por defecto es: 0 1 auto; pero al momento que les das algún valor sin especificar, el basis se pone en 0% en vez de auto. Esto hace que no tenga en cuenta el espacio alrededor del contenido.
 
 
 align-self: auto | flex-start | flex-end...         Es align-items para un único elemento díscolo.
