@@ -1,0 +1,56 @@
+/* CLASES GENERALES - ELEMENTOS */
+
+* {
+  box-sizing: border-box;
+}
+
+/* CLASES GENERALES DE BOTONES */
+
+.btn {
+  font-family: Poppins;
+  font-size: 18px;
+  line-height: 145%;
+  color: #fff;
+  background-color: hsl(213, 100%, 56%);
+  padding: 12px 52px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: hsl(213, 100%, 65%);
+}
+
+.btn:active {
+  background-color: hsl(213, 92%, 41%);
+}
+
+.btn:disabled {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.btn--secondary {
+  color: hsl(213, 100%, 56%);
+  border: 2px solid;
+  background-color: unset;
+}
+
+.btn--secondary:hover {
+  background-color: unset;
+  color: hsl(213, 100%, 65%);
+  border-color: currentColor;
+}
+
+.btn--secondary:active {
+  background-color: unset;
+  color: hsl(213, 92%, 41%);
+  border-color: currentColor;
+}
+
+.btn--secondary:disabled {
+  background-color: unset;
+  color: hsl(0, 0%, 90%);
+  border-color: currentColor;
+}
