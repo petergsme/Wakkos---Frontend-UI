@@ -1,0 +1,55 @@
+/* CLASES GENERALES - ELEMENTOS */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-18);
+  line-height: var(--font-line-height-165);
+}
+
+/* CLASES DEL MODAL */
+
+#modal {
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--color-blue-very-dark);
+}
+
+.modal-card {
+  position: absolute;
+  width: max-content;
+  background-color: var(--color-white);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: var(--space-52);
+  border-radius: var(--border-radius-20);
+  text-align: center;
+  box-shadow: 0 0 25px 0px hsl(0, 0%, 8%);
+}
+
+.modal-heading {
+  color: var(--text-color-main);
+  font-size: var(--font-size-30);
+  font-weight: var(--font-weight-medium);
+  margin: 0 0 var(--bottom-margin-36) 0;
+}
+
+.modal-text {
+  color: var(--color-purple);
+  font-weight: var(--font-weight-light);
+  margin: 0 0 var(--bottom-margin-36) 0;
+}
+
+#modal .btn--secondary {
+  margin: 0 var(--right-margin-20) 0 0;
+}
+
+.modal-hidden {
+  display: none;
+}

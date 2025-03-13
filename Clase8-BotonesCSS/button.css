@@ -16,60 +16,62 @@ body {
 
 /* BOTÓN PRINCIPAL */
 .btn {
-  font-family: Poppins;
-  font-size: 18px;
-  line-height: 145%;
-  color: #fff;
-  background-color: hsl(213, 100%, 56%);
-  padding: 12px 52px;
-  border-radius: 10px;
-  border-width: 2px;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-18);
+  line-height: var(--font-line-height-145);
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  padding: var(--space-12) var(--space-52);
+  border-radius: var(--border-radius-10);
+  border-width: var(--border-width-2);
   border-style: solid;
   border-color: transparent;
   /* Esto sirve para que no varie el tamaño cuando sí tenga borde. Siempre que alguno de nuestros botones tenga border todos deberán llevarlo. Es mejor desglosar esas propiedades y que estén y cambies solo la necesaria.*/
   outline: none;
   text-decoration: none;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   transition: all 0.1s ease-in;
 
   &:hover {
-    background-color: hsl(213, 100%, 65%);
+    background-color: var(--color-blue-light);
   }
 
   &:active {
-    background-color: hsl(213, 92%, 41%);
+    background-color: var(--color-blue-dark);
   }
 
   &:disabled {
-    background-color: hsl(0, 0%, 90%);
+    background-color: var(--color-grey);
+    cursor: var(--cursor-not-allowed);
   }
 }
 
 /* BOTÓN SECUNDARIO */
 .btn--secondary {
-  color: hsl(213, 100%, 56%);
+  color: var(--color-blue);
   border-color: currentColor;
   background-color: unset;
 
   &:hover {
     background-color: unset;
-    color: hsl(213, 100%, 65%);
+    color: var(--color-blue-light);
   }
 
   &:active {
     background-color: unset;
-    color: hsl(213, 92%, 41%);
+    color: var(--color-blue-dark);
   }
 
   &:disabled {
     background-color: unset;
-    color: hsl(0, 0%, 90%);
+    color: var(--color-grey);
+    cursor: var(--cursor-not-allowed);
   }
 }
 
 /* BOTÓN TEXTO */
 .btn--text-link {
-  color: hsl(213, 100%, 56%);
+  color: var(--color-blue);
   background-color: unset;
   padding: 0px;
   border-radius: 0px;
@@ -78,25 +80,33 @@ body {
   text-decoration: none;
 
   &:hover {
-    color: hsl(213, 100%, 65%);
+    color: var(--color-blue-light);
     background-color: unset;
   }
 
   &:active {
-    color: hsl(213, 92%, 41%);
+    color: var(--color-blue-dark);
     background-color: unset;
   }
 
   &:disabled {
-    color: hsl(0, 0%, 90%);
+    color: var(--color-grey);
     background-color: unset;
+    cursor: var(--cursor-not-allowed);
   }
 }
 
 /* CLASES DE FLEX */
-
+/* Las he añadido para organizar así por encima el contenido de la web. */
 .column {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
+/* PRUEBAS */
+
+.container .btn--secondary {
+  --button-color-main: red;
+}
+/* Este ejemplo  */
