@@ -4,8 +4,17 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+
 /* CLASES GENERALES DE BOTONES */
 
+/* BOTÓN PRINCIPAL */
 .btn {
   font-family: Poppins;
   font-size: 18px;
@@ -14,43 +23,80 @@
   background-color: hsl(213, 100%, 56%);
   padding: 12px 52px;
   border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  /* Esto sirve para que no varie el tamaño cuando sí tenga borde. Siempre que alguno de nuestros botones tenga border todos deberán llevarlo. Es mejor desglosar esas propiedades y que estén y cambies solo la necesaria.*/
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+
+  &:hover {
+    background-color: hsl(213, 100%, 65%);
+  }
+
+  &:active {
+    background-color: hsl(213, 92%, 41%);
+  }
+
+  &:disabled {
+    background-color: hsl(0, 0%, 90%);
+  }
+}
+
+/* BOTÓN SECUNDARIO */
+.btn--secondary {
+  color: hsl(213, 100%, 56%);
+  border-color: currentColor;
+  background-color: unset;
+
+  &:hover {
+    background-color: unset;
+    color: hsl(213, 100%, 65%);
+  }
+
+  &:active {
+    background-color: unset;
+    color: hsl(213, 92%, 41%);
+  }
+
+  &:disabled {
+    background-color: unset;
+    color: hsl(0, 0%, 90%);
+  }
+}
+
+/* BOTÓN TEXTO */
+.btn--text-link {
+  color: hsl(213, 100%, 56%);
+  background-color: unset;
+  padding: 0px;
+  border-radius: 0px;
   border: none;
   outline: none;
   text-decoration: none;
+
+  &:hover {
+    color: hsl(213, 100%, 65%);
+    background-color: unset;
+  }
+
+  &:active {
+    color: hsl(213, 92%, 41%);
+    background-color: unset;
+  }
+
+  &:disabled {
+    color: hsl(0, 0%, 90%);
+    background-color: unset;
+  }
 }
 
-.btn:hover {
-  background-color: hsl(213, 100%, 65%);
-}
+/* CLASES DE FLEX */
 
-.btn:active {
-  background-color: hsl(213, 92%, 41%);
-}
-
-.btn:disabled {
-  background-color: hsl(0, 0%, 90%);
-}
-
-.btn--secondary {
-  color: hsl(213, 100%, 56%);
-  border: 2px solid;
-  background-color: unset;
-}
-
-.btn--secondary:hover {
-  background-color: unset;
-  color: hsl(213, 100%, 65%);
-  border-color: currentColor;
-}
-
-.btn--secondary:active {
-  background-color: unset;
-  color: hsl(213, 92%, 41%);
-  border-color: currentColor;
-}
-
-.btn--secondary:disabled {
-  background-color: unset;
-  color: hsl(0, 0%, 90%);
-  border-color: currentColor;
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
