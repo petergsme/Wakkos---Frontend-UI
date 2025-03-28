@@ -15,10 +15,10 @@ body {
 
 #modal {
   position: absolute;
-  min-width: 100vw;
-  min-height: 100vh;
+  inset: 0;
   background-color: var(--color-blue-very-dark);
 }
+/* todo lo que tenga absolute necesita posicion, INSET le da posicion */
 
 .modal-card {
   position: absolute;

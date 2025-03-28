@@ -1,0 +1,128 @@
+:root {
+  /* -----> Colors */
+  --color-blue: hsl(213, 100%, 56%);
+  --color-blue-dark: hsl(215 , 64%, 9%);
+  --color-blue-light-dark2: hsl(216 , 39%, 14%);
+  --color-blue-light-dark: hsl(214 , 18%, 26%);
+  --color-purple: hsl(257, 65%, 51%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* -----> Sizes */
+  --size-60: 60px;
+  --size-40: 40px;
+  --size-16: 16px;
+
+  /* -----> Spacing */
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-56: 56px;
+
+  /* -----> Padding */
+
+
+  /* -----> Layouts */
+  --border-radius-10: var(--space-10);
+  --border-radius-20: var(--space-20);
+
+  /* -----> Fonts & Typography */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-size-14: 14px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-family-body: "Poppins", sans-serif;
+
+  --font-line-height-120: 120%;
+  --font-line-height-145: 145%;
+  --font-line-height-165: 165%;
+
+  --text-color-main: var(--color-white);
+  --text-color-accent: var(--color-blue-light);
+
+  /* -----> Buttons */
+  --button-color-main: var(--color-blue);
+  --button-color-light: var(--color-blue-light);
+
+  --button-accent-color: var(--color-purple)
+
+  /* -----> Margins */
+  --bottom-margin-36: var(--space-36);
+  --right-margin-20: var(--space-20);
+
+  /* -----> Gap */
+  --gap-small-20: var(--space-20);
+  --gap-regular-36: var(--space-36);
+  /* Com més sucre més dolç: como puedes ver he creado cust.prop. para gap, pero para padding uso directamente las cust.prop. de spacing, haz lo que veas mas conveniente. */
+}
+
+body {
+  margin: 0;
+  color: white;
+  font-family: poppins;
+}
+
+/* El sidebar */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  min-height: 100vh;
+  background-color: var(--color-blue-dark);
+  padding: var(--space-10);
+}
+
+.main-nav {
+  flex-grow: 1;
+}
+
+/* TARJETAS DE ARRIBA Y ABAJO */
+
+.card {
+  display: flex;
+  font-size: var(--font-size-14);
+  background-color: var(--color-blue-light-dark2);
+  padding: var(--space-10);
+  border-radius: var(--border-radius-20);
+  gap: var(--space-10);
+  align-items: center;
+  
+  & p {
+    margin: 0
+  }
+}
+
+.card__image {
+  width: var(--size-60);
+  height: var(--size-60);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-20);
+}
+
+.card__text {
+  flex-grow: 1;
+}
+
+.card__title {
+  font-weight: var(--font-weight-bold);
+}
+
+.card__button {
+  width: var(--size-40);
+  height: var(--size-40);
+  border-radius: var(--border-radius-10);
+  background-color: var(--color-blue-light-dark);
+  border: none;
+}
+
+.card__icon {
+
+}
+
+
+/* NAV */

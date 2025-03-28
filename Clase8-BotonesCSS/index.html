@@ -10,37 +10,57 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="button.css" />
-    <link rel="stylesheet" href="modal.css" />
+    <link rel="stylesheet" href="./Botones/button.css" />
+    <link rel="stylesheet" href="./Modales/modal.css" />
 
     <title>Document</title>
   </head>
   <body>
     <section class="column">
-      <button class="btn">Button</button>
-      <button class="btn" disabled>Button</button>
-    </section>
+      <h2>Botones</h2>
+      <section class="row">
+        <button class="btn">Button</button>
+        <button class="btn" disabled>Button</button>
+      </section>
 
-    <section class="column container">
-      <button class="btn btn--secondary">Button</button>
-      <button class="btn btn--secondary" disabled>Button</button>
-    </section>
+      <section class="row container">
+        <button class="btn btn--secondary">Button</button>
+        <button class="btn btn--secondary" disabled>Button</button>
+      </section>
 
-    <section class="column">
-      <button class="btn btn--text-link">Button</button>
-      <button class="btn btn--text-link" disabled>Button</button>
-    </section>
+      <section class="row">
+        <button class="btn btn--text-link">Button</button>
+        <button class="btn btn--text-link" disabled>Button</button>
+      </section>
 
-    <section id="modal" class="modal-hidden">
-      <div class="modal-card">
-        <h3 class="modal-heading">Are you sure you want to complete this course?</h3>
-        <p class="modal-text">
-          Make sure you have tagged all attenders.<br />
-          Once you complete the course you will not be able to make changes.
-        </p>
-        <button class="btn btn--secondary">No</button><button class="btn" disabled>Yes</button>
-      </div>
+      <section id="modal" class="modal-hidden">
+        <div class="modal-card">
+          <h3 class="modal-heading">Are you sure you want to complete this course?</h3>
+          <p class="modal-text">
+            Make sure you have tagged all attenders.<br />
+            Once you complete the course you will not be able to make changes.
+          </p>
+          <button class="btn btn--secondary">No</button><button class="btn" disabled>Yes</button>
+        </div>
+      </section>
+
+      <section id="modales" class="column">
+        <h2>Modal</h2>
+
+        <button class="btn">Button</button>
+
+        <section id="modal" class="modal-hidden">
+          <div class="modal-card">
+            <h3 class="modal-heading">Are you sure you want to complete this course?</h3>
+            <p class="modal-text">
+              Make sure you have tagged all attenders.<br />
+              Once you complete the course you will not be able to make changes.
+            </p>
+            <button class="btn btn--secondary">No</button><button class="btn" disabled>Yes</button>
+          </div>
+        </section>
+      </section>
     </section>
   </body>
-  <script src="./script.js"></script>
+  <script src="./Modales/modal.js"></script>
 </html>
