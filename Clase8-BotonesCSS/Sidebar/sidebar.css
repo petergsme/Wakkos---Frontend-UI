@@ -126,7 +126,7 @@ body {
   width: var(--medium-icon-40);
   height: var(--medium-icon-40);
   border-radius: var(--border-radius-10);
-  background-color: var(--color-blue-light-dark);
+  background-color: var(--color-greyish-blue);
   border: none;
 }
 
