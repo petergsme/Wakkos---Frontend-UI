@@ -1,0 +1,80 @@
+:root {
+  /* -----> Colors */
+  --color-blue: hsl(213, 100%, 56%);
+  --color-purple: hsl(243, 31%, 30%);
+  --color-greyish-blue: hsl(215, 21%, 22%);
+  --color-dark-blue: hsl(216, 39%, 14%);
+  --color-very-dark-blue: hsl(215, 64%, 9%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-washed-white: hsl(0, 0%, 95%);
+
+  /* -----> Sizes */
+  --size-16: 16px;
+  --size-40: 40px;
+  --size-60: 60px;
+
+  --small-icon-16: var(--size-16);
+  --medium-icon-40: var(--size-40);
+  --big-icon-60: var(--size-60);
+
+  /* -----> Spacing */
+  --space-10: 10px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-56: 56px;
+
+  /* -----> Padding */
+  --small-padding-10: var(--space-10);
+  --medium-padding-20: var(--space-20);
+
+  /* -----> Margins */
+  --top-margin-20: var(--space-20);
+
+  --right-margin-16: var(--space-16);
+
+  --bottom-margin-16: var(--space-16);
+  --bottom-margin-56: var(--space-56);
+
+  /* -----> Gap */
+  --gap-small-10: var(--space-10);
+
+  /* -----> Layouts */
+  --border-radius-10: var(--space-10);
+  --border-radius-20: var(--space-20);
+
+  /* -----> Fonts & Typography */
+  --font-size-14: 14px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --font-family-body: 'Poppins', sans-serif;
+
+  --font-line-height-100: 100%;
+
+  --text-color-main: var(--color-white);
+  --text-color-accent: var(--color-blue);
+}
+
+/* RECUERDA, puedes desarrollar props. personalizadas para clases de utilidad.*/
+
+/* AJUSTES GENERALES */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  margin: 0;
+  font-family: var(--font-family-body);
+  background-color: var(--color-very-dark-blue);
+}

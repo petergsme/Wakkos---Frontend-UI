@@ -1,0 +1,16 @@
+/* PROVISIONAL */
+
+main {
+  display: flex;
+  width: 100%;
+  background-color: var(--color-washed-white);
+  border-radius: var(--border-radius-20);
+  margin: var(--space-10) var(--space-10) var(--space-10) 0;
+  padding: var(--small-padding-10);
+
+  & .white-section {
+    background-color: var(--color-white);
+    min-width: 50%;
+    border-radius: var(--border-radius-20);
+  }
+}
